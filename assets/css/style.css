@@ -1,0 +1,4194 @@
+ /*--------------------------------------------------------------
+  #
+  --------------------------------------------------------------*/
+
+  section{
+    background-color: white;
+  }
+
+  body{
+    margin: 0;
+    background-color: black;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  @media (min-width:320px) and (max-width:991px){
+  
+  }
+
+ /*--------------------------------------------------------------
+  #
+  --------------------------------------------------------------*/
+  #header{
+    background-color: #3d504e;
+    width: 95.7%;
+    height: 100px;
+    margin-top: 00px;
+    padding: 6px;
+    z-index: 1030;
+    position: fixed;
+    display: flex;
+  }
+
+  #header h1{
+    margin-top: 20px;
+    margin-left: 20%;
+    font-size: 20px;
+    color: white;
+  }
+
+  #header .left .row{
+    width: 150%;
+    padding-top: 10px;
+    margin-left: 110%;
+  }
+
+  #header .left p{
+    font-size: 14px;
+    color: white;
+    text-align: right;
+  }
+
+  #header .left .select .form-control{
+    width: 50%;
+    padding: 0%;
+    margin-top: 10px;
+    height: 34px;
+    border: 2px solid #b9bf37;
+    background-color: #bc121200;
+  }
+
+  #header .left .select option{
+    color: #b9bf37;
+    background-color: rgb(55, 55, 55);
+    border-radius: 0%;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .logo1{
+    width: 32%;
+    margin-left: 32%;
+    margin-top: 20px;
+  }
+
+  #navbar{
+    background-color: rgb(0, 0, 0);
+    width: 18%;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    position: fixed;
+    z-index: 3030;
+    transition: all .5s ease-in-out;
+  }
+
+  .nav-menu .nav-item::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    background: #bab074;
+    color: #000;
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+    transition: 0.4s;
+  }
+    
+  .nav-menu .top .nav-item, .nav-menu .bottom .nav-item{
+    transform: perspective(2px) translateZ(0);
+    color: black;
+    transition: 0.4s;
+    width: 104%;
+    height: fit-content;
+    padding: 10px; 
+    margin-left: -4px;
+    padding-left:10px;
+    font-weight: 500;
+  }
+  
+  .nav-menu .nav-item:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+  
+  .nav-menu .nav-item:hover span,
+  .nav-menu .bottom .nav-item:hover span
+  {
+    color: white;
+    transition: all .2s ease-in-out;
+  }
+
+  #navbar::-webkit-scrollbar{
+    display: none;
+  }
+
+  .nav-menu ul{
+    display: block;
+    list-style-type: none;
+    padding: 4px;
+    text-transform: uppercase;
+  }
+  
+  .nav-menu a:any-link , .nav-item:any-link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  .nav-menu .bottom .nav-item:any-link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  #close{
+    display: none;
+  }
+    
+  .nav-menu i{
+    font-size: 20px;
+    margin: 0;    
+    align-self:center;
+  }
+  
+  .nav-menu span{
+    font-size: 11px;
+    padding: 10px 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .nav-menu .top{
+    background-color: #e6e7e8;
+  }
+  
+  .nav-menu .bottom{
+    background-color: black;
+  }
+  
+  .nav-menu .bottom .nav-item span{
+    text-transform: capitalize;
+    color: #b9bf37;
+  }
+
+  .nav-menu .social i{
+    color: rgb(126, 126, 126);
+    font-size: 31px;
+  }
+
+  .nav-menu .social .link{
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 50px;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .nav-menu .social .link a:any-link{
+    color: rgb(126, 126, 126);
+  }
+
+  .nav-menu .social .link a:any-link:hover{
+    color: #b9bf37;
+    transition: all.3s ease-in-out;
+  }
+
+  .nav-menu .social i:hover{
+    color: rgb(255, 255, 255);
+    transition: all.3s ease-in-out;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 104%;
+    height: fit-content;
+    padding: 10px; 
+    padding-left: 5px;
+    margin-left: -4px;
+    color: black;
+    margin-bottom: 0px;
+  }
+
+
+  .dropdown:hover{
+    background: linear-gradient(to right, #bab074 50%, rgba(202, 37, 37, 0) 0);
+    animation: cover .5s reverse ;
+    background-size: 200% 100%;
+  }
+  
+  .dropdown:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #e6e7e8;;
+    width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.53);
+    z-index: 221;
+  }
+
+  .dropdown-content a {
+    color: black;
+    font-size: 11px;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 200;
+  }
+
+  .dropdown-content a:hover{
+    background: linear-gradient(to right, #bab074 50%, rgba(202, 37, 37, 0) 0);
+    animation: cover .5s reverse ;
+    background-size: 200% 100%;
+    color: white;
+    transition: all .2s ease-in-out;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    margin-left: 0%;
+    position: absolute;
+    margin-top:4%;
+  }
+
+  .img-side{
+    width: 12%;
+  }
+
+  .img-side2{
+    width: 9%;
+  }
+  
+  
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #000000;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (min-width:360px) and (max-width:991px){
+  body{
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  #open .mobile-nav-toggle {
+    display: block;
+    margin-top: 20px;
+    margin-left: 15px;
+    z-index: 30;
+    cursor: pointer;
+    font-size: 40px;
+    transition: all 0.5s ease-in-out;
+    color: white;
+  }
+
+  #close {
+    display: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 40px;
+    transition: all 0.5s ease-in-out;
+    color: white;
+  }
+
+  #header{
+    background-color: #3d504e;
+    width: 100%;
+    height: 80px;
+    margin-top: -0.3%;
+    margin-left: -2%;
+    padding: 6px;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+  }
+
+  #header h1{
+    display: none;
+  }
+
+  .logo{
+    width: 39%;
+    margin-left: 21%;
+    display: block;
+    position: relative;
+  }
+
+  .logo1{
+    display: none;
+  }
+
+  .nav-menu .active {
+    overflow: hidden;
+  }
+
+  #navbar{
+    background-color: rgb(0, 0, 0);
+    width: 0;
+    height: 100%;
+    display: block;
+    margin-top: 80px;
+    margin-left: -12px;
+    position: fixed;
+    z-index: 1000;
+    transition: all .3s ease-in-out;
+  }
+
+  .nav-menu .bottom{
+    background-color: black;
+    padding-left: 7px;
+  }
+
+  
+  .nav-menu ul{
+    padding: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .nav-menu i{
+    font-size: 25px;
+    margin: 0;    
+    align-self:center;
+  }
+
+  .nav-menu span{
+    font-size: 17px;
+    padding: 5px 8px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #e6e7e8;;
+    width: 320px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.53);
+    z-index: 221;
+  }
+
+  .dropdown-content a {
+    color: black;
+    font-size: 15px;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 200;
+  }
+
+}
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+
+#main{
+  width: 81%;
+  margin-top: 100px;
+  margin-left: 18.7%;
+  padding-left: 0px;
+}
+
+
+.hero{
+  background-image: url(../img/30546-Automotive-Supplies-STS-Global.jpg);
+  height: 400px;
+  width: 100%;
+  margin-top: 100px;
+  padding: 15px;
+}
+
+.hero .map{
+  background-image: url(../img/map.svg);
+  background-repeat: no-repeat;
+  background-size: 1300px;
+  background-position-y: 0px;
+  background-position-x: 0px;
+  width: 1030px;
+  height: 500px;
+  opacity: 0.6;
+  position: absolute;
+  margin-top: -420px;
+}
+
+.hero .map-bg{
+  width: 600px;
+  height: 700px;
+  margin-top: -100px;
+  position: absolute;
+  margin-left: -50px;
+  opacity: 0.9;
+}
+
+.hero h1{
+  font-size: 45px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-top: 130px;
+  padding-left: 50px;
+}
+
+.hero .service{
+  font-size: 45px;
+  font-weight: 600;
+  text-shadow: 3px 5px 7px  #000000;
+}
+
+.hero .support{
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 3px 5px 7px  #000000;
+}
+
+.hero .btn{
+  height: 40px;
+  width: 270px;
+  border-radius: 0%;
+  background-color: rgba(0, 0, 0, 0);
+  border:4px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 55px;
+  margin-top: 20px;
+}
+
+
+@media (min-width:360px) and (max-width:991px){
+
+  #main{
+    width: 104%;
+    margin-top: -15px;
+    margin-left: -2%;
+    padding-left: 0px;
+  }
+
+  .hero .map{
+    background-image: url(../img/map.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 0px;
+    background-position-x: 0px;
+    width: 100%;
+    height: 500px;
+    opacity: 0.6;
+    position: absolute;
+    margin-top: -350px;
+  }
+  
+  .hero .map-bg{
+    width: 60px;
+    height: 70px;
+    margin-top: 00px;
+    position: relative;
+    margin-left: 0px;
+    opacity: 0.2;
+    display: none;
+  }
+  
+  .hero h1{
+    font-size: 45px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  
+  .hero .service{
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 2px 4px 6px  #787878;
+  }
+
+  .hero .support{
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 2px 4px 6px  #898989;
+  }
+
+  .hero .btn{
+    height: 50px;
+    width: 320px;
+    background-color: rgba(0, 0, 0, 0);
+    border:4px solid #ffffff;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 0;
+  }
+
+  .hero .btn:hover{
+    background-color: #b9bf37;
+  }
+} 
+
+
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .parts{
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+ }
+
+.parts a:any-link{
+  text-decoration: none;
+}
+
+.parts .vehicle-type-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+}
+
+
+.parts .vehicle-type-inner {
+  background: #fff;
+  transform: perspective(1px) translateZ(0);
+  color: black;
+  transition: 0.4s;
+}
+
+.parts .vehicle-type-inner::before {
+  background: #b9bf37;
+  color: #000;
+  clip-path: inset(0 100% 0 0);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+
+.parts .vehicle-type-inner:hover::before {
+  clip-path: inset(0 0 0 0);
+}
+
+.parts h4{
+  color: #3d504e;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 10px;
+  position: relative;
+  z-index: 200;
+}
+
+
+.parts .vehicle-type-inner:hover h4 {
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+
+.parts .spare img{
+   width: 55%;
+   position: relative;
+   z-index: 200;
+   margin-left: 80px;
+   padding-top: 5px;
+   padding-bottom: 10px;
+}
+
+.img-row{
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+}
+
+.parts .vehicle-type-inner hr{
+  rotate: 90deg;
+  border: 1px solid rgba(0, 0, 0, 0.589);
+  background-color: #000000be;
+  margin-left: 256px;
+  margin-top: -110px;
+  width: 180px;
+}
+
+.parts .vehicle-type-inner .hr-top{
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  background-color: #00000004;
+  width: 93%;
+  position: absolute;
+  height: 0.1%;
+  rotate: 0deg;
+  margin-left: 7px;
+  margin-top: -20.6px;
+}
+
+.parts .vehicle-type-inner .hr-bottom{
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  background-color: #00000004;
+  width: 93%;
+  position: absolute;
+  height: 0.1%;
+  rotate: 0deg;
+  margin-left: 7px;
+  margin-top: 143.6px;
+}
+
+#about .hero{
+  margin-top: 0px;
+  padding-top: 15%;
+  width: 100%;
+  height: 400px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.834);
+}
+
+
+ @media (min-width:320px) and (max-width:991px){
+  
+  .parts .btn{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .parts .spare{
+    display: block;
+    width: 95%;
+    height: 200px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    background-color: transparent;
+  }
+
+  .parts .spare img{
+    width: 40%;
+    margin-left: 0%;
+  }
+
+
+  #about .hero{
+    margin-top: 0px;
+    padding: 0%;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.834);
+  }
+
+  .parts .vehicle-type-inner hr{
+    display: none;
+  }
+  
+  .parts .vehicle-type-inner .hr-top{
+    border: 1px solid rgba(0, 0, 0, 0.342);
+    background-color: #00000004;
+    width: 93%;
+    position: absolute;
+    height: 0.1%;
+    rotate: 0deg;
+    margin-left: 7px;
+    margin-top: -20.6px;
+  }
+  
+  .parts .vehicle-type-inner .hr-bottom{
+    border: 1px solid rgba(0, 0, 0, 0.719);
+    background-color: #00000004;
+    width: 93%;
+    position: absolute;
+    height: 0.1%;
+    rotate: 0deg;
+    margin-left: -16px;
+    margin-top: 176.6px;
+  }
+
+  .parts .spare img{
+    width: 45%;
+    position: relative;
+    z-index: 200;
+    margin-left: 80px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+ }
+ 
+
+ }
+
+ /*----------------------------------------
+**
+ ------------------------------------------------*/
+
+
+
+.quality{
+  padding: 40px 70px;
+}
+
+.quality h1{
+  color: #3d504e;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.quality h3{
+  color: #3d504e;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.quality p{
+  font-weight:400;
+  font-size: 15px;
+  padding: 15px 45px;
+}
+
+.product h5{
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 0 45px;
+  padding-top: 20px;
+  margin: 0%;
+  font-size: 15px;
+}
+
+.product h4{
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 0 45px;
+  padding-top: 20px;
+  margin: 0%;
+  font-size: 15px;
+}
+
+.product .roww{
+  display: inline-flex;
+  width: 100%;
+}
+
+.quality .supply ul, .product ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 20px 45px;
+  font-size: 14px;
+}
+
+.business ul{
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 1px 45px;
+  font-size: 14px;
+}
+
+.quality .read-more{
+  color: #bab074;
+  text-decoration: none;
+}
+
+ @media (min-width:360px) and (max-width:991px){
+  .quality{
+    padding: 10px;
+  }
+  
+  .quality h1{
+    color: #3d504e;
+    font-size: 23px;
+    font-weight: 600;
+  }
+
+  .quality h3{
+    color: #3d504e;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .quality p{
+    font-weight:400;
+    font-size: 15px;
+    padding-left: 12px;
+    padding: 0%;
+    width: 100%;
+  }
+
+  .quality .supply ul, .product ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  
+  .business ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 1px 25px;
+    font-size: 14px;
+  }
+
+  .product ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 10px 10px;
+    margin: 0%;
+    font-size: 13px;
+  }
+
+  .product .roww{
+    display: inline-flex;
+  }
+
+  .product h5{
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .product h4{
+    padding: 2%;
+  }
+ }
+
+/*----------------------------------------
+**------VEHICLES PAGE-------------**
+ ------------------------------------------------*/
+
+ .links{
+  width: 77.7%;
+  margin-left: 1px;
+  margin-top: 0%;
+  position: fixed;
+  z-index: 100;
+ }
+
+ ul.breadcrumb {
+  padding: 6px 16px;
+  list-style: none;
+  background-color: #c7c8ca;;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 13px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+ 
+ @media (min-width:360px) and (max-width:991px){
+  .links{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: -11%;
+    position: fixed;
+    z-index: 100;
+   }
+
+   ul.breadcrumb {
+    padding: 30px 10px;
+    padding-bottom: 10px;
+    list-style: none;
+    background-color: #c7c8ca;;
+  }
+
+   ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+  }
+ }
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+ .hero-bg{
+  position: fixed;
+  padding: 0%;
+  margin-top: 2.4%;
+  width: 77.7%;
+  margin-left: 1px;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../img/vehicles/54145-Vehicles-STS-Global.jpg);
+ }
+
+ .hero-bg h1{
+  color: #b9bf37;
+  font-weight: 800;
+  font-size: 50px;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: 25%;
+  margin-left: 4%;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.656);
+ }
+
+ .container {
+    position: absolute;
+    right: 3%;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.129);
+  }
+
+  .hero-bg .container h4, .global .container h4{
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    margin: 15px;
+    font-weight: 600;
+  }
+
+  .container .btn{
+    height: 30px;
+    border-radius: 0%;
+    padding: 0%;
+    border: none;
+    font-size: 12px;
+    background-color: #b9bf37;
+    width: 100%;
+  }
+
+  .form-control{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 8px 0;
+    border: none;
+    border-radius: 0%;
+    background: #f1f1f17f;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+  }
+
+  .form-control::placeholder{
+    color: white;
+  }
+
+  .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.129);
+    outline: none;
+  }
+
+
+@media (min-width:360px) and (max-width:991px){
+  .hero-bg{
+    position: relative;
+    padding: 0%;
+    margin-top: 30%;
+    width: 100%;
+    margin-left: 1px;
+    height: 250px;
+    background-size: cover;
+    background-image: url(../img/vehicles/54145-Vehicles-STS-Global.jpg);
+   }
+
+   .container {
+    position: absolute;
+    right: 0%;
+    margin: 0px;
+    max-width: 100%;
+    height: 390px;
+    padding: 13px;
+    margin-top: 50%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(135, 135, 135, 0.982);
+  }
+
+  .hero-bg h1{
+    margin-top: 30%;
+  }
+
+  .hero-bg .container h4, .global .container h4{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: 15px;
+    font-weight: 600;
+  }
+
+  .form-control{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 8px 0;
+    border: none;
+    border-radius: 0%;
+    background: #f1f1f17f;
+    font-size: 19px;
+    text-align: center;
+    color: white;
+  }
+
+  .container .btn{
+    height: 45px;
+    border-radius: 0%;
+    padding: 0%;
+    border: none;
+    font-size: 22px;
+    background-color: #b9bf37;
+    width: 100%;
+  }
+}
+
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+ #scroll-effect{
+  width: 77.7%;
+  position: absolute;
+  margin-top: 32%;
+  margin-left: 1px;
+  z-index: 13;
+  background-color: #ffffff;
+ }
+
+ .vehicles{
+  background-color: rgb(255, 255, 255);
+  position: relative;
+ }
+
+ .vehicles .vehicle-types{
+  padding: 0%;
+  padding-left: 1%;
+  background-color: rgb(255, 255, 255);
+ }
+
+ .vehicles .vehicle-type-inner {
+  padding: 20px;
+  height: 180px;
+  background-color: #b0161600;
+  color: #01447e;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(.86, .01, .15, .99);
+ }
+
+ .vehicles .vehicle-types a:any-link{
+  text-decoration: none;
+ }
+
+ .vehicles .vehicle-type-inner h5{
+  color: #bab074;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 25px;
+  text-transform: uppercase;
+ }
+
+.vehicles .vehicle-type-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+}
+
+.vehicles .vehicle-type-inner {
+  background: #fff;
+  transform: perspective(1px) translateZ(0);
+  color: black;
+  transition: 0.4s;
+}
+
+.vehicles .vehicle-type-inner::before {
+  background: #b9bf37;
+  color: #000;
+  clip-path: inset(0 0 100% 0);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.vehicles .vehicle-type-inner:hover::before {
+  clip-path: inset(0 0 0 0);
+}
+
+.vehicles .vehicle-type-inner:hover h5 {
+  color: white;
+  transition: all .4s ease-in-out;
+}
+
+ .vehicles .vehicle-icon{
+  width: 48%;
+ }
+
+ .vehicles .vehicle-type-inner hr{
+  height: 0.5px;
+  width: 127px;
+  rotate: 90deg;
+  margin-top: -22%;
+  margin-left: 78.2%;
+  border: 1px solid #787878cb;
+ }
+
+ .vehicles .related-products{
+  width: 31.2%;
+  height: 540px;
+  margin-left: 1.1%;
+  background-color: #0000000c;
+  padding: 30px;
+ }
+
+ .vehicles .related-products .row{
+  display: inline-flex;
+  margin-top: 30px;
+ }
+
+
+ .vehicles .related-products .inner{
+  background-color: #01447e00;
+  padding: 10px;
+  padding-top: 40px;
+ }
+
+ .vehicles .related-products .inner h5{
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 22px;
+  margin-left: -13px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+ }
+
+ .vehicles .related-products .card{
+  width: 54%;
+  height: 85px;
+  padding: 0%;
+  border-radius: 0%;
+  overflow: hidden;
+  border: none;
+  background-color: #000;
+ }
+
+ .vehicles .related-products .card img{
+  width: 154px;
+  height: 85px;
+ }
+
+ .vehicles .related-products p{
+  font-size: 14px;
+  padding-top: 10px;
+  background-color: #01447e00;
+  width: 46%;
+  word-wrap: break-word;
+ }
+
+ .vehicles .hover{
+  height: 84px;
+  width: 150px;
+  position: absolute;
+  background: #ffffff00;
+  transform: perspective(1px) translateZ(0);
+  color: black;
+  transition: 0.4s;
+  /* padding: 10px; */
+ }
+
+ .vehicles .hover .img{
+  color: rgba(255, 255, 255, 0);
+  display: block;
+  width: 112px;
+  padding: 30px;
+  margin-left: -70%;
+  transition: all .3s ease-in-out;
+ }
+
+ .vehicles .hover:hover .img{
+  display:block;
+  transition: all .3s ease-in-out;
+  margin-left: 0%;
+ }
+
+  .vehicles .related-products .hover::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.62);
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+    transition: 0.4s;
+  }
+
+  .vehicles .related-products .hover:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .vehicles .related-products .hover:hover {
+    color: white;
+    box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+  }
+  
+ 
+@media (min-width:360px) and (max-width:991px) {
+  #scroll-effect{
+    width: 100%;
+    position: absolute;
+    margin-top: 87%;
+    margin-left: 0px;
+    z-index: 13;
+    background-color: #891515;
+   }
+
+   .vehicles .vehicle-type-inner {
+    padding: 20px;
+    height: 200px;
+    background-color: #b0161600;
+    color: #01447e;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(.86, .01, .15, .99);
+   }
+
+   .vehicles .vehicle-icon{
+    width: 35%;
+   }
+
+   .vehicles .vehicle-type-inner h5{
+    color: #bab074;
+    font-size: 23px;
+    font-weight: 700;
+    padding-top: 25px;
+    text-transform: uppercase;
+   }
+
+   .vehicles .related-products{
+    width: 100%;
+    /* display: none; */
+    height: 800px;
+    margin-left: 1.1%;
+    background-color: #0000000c;
+    padding: 30px;
+    padding-top: 0%;
+   }
+
+   .vehicles .related-products .row{
+    display: block;
+    margin-top: 30px;
+   }
+  
+   .vehicles .related-products .inner h5{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+   }
+  
+   .vehicles .related-products .inner{
+    background-color: #01447e00;
+    padding: 10px;
+    padding-top: 40px;
+   }
+
+   .vehicles .related-products .card{
+    width: 70%;
+    height: 150px;
+    margin: auto;
+   }
+
+   .vehicles .related-products .card img{
+    width: 100%;
+    height: 150px;
+   }
+
+   .vehicles .related-products p{
+    font-size: 17px;
+    padding-top: 10px;
+    background-color: #01447e00;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+   }
+
+   .vehicles .hover{
+    height: 150px;
+    width: 100%;
+    transition: 0.4s;
+   }
+  
+   .vehicles .hover .img{
+    color: rgba(255, 255, 255, 0);
+    display: block;
+    width: 100%;
+    padding: 58px;
+    margin-left: -75%;
+    transition: all .3s ease-in-out;
+   }
+
+   .vehicles .hover:hover .img{
+    display:block;
+    transition: all .3s ease-in-out;
+    margin-left: 0%;
+   }
+  
+}
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .jumbotron{
+  margin-top: 00px;
+ }
+
+ .jumbotron .main{
+  display: flex;
+  /* height: ; */
+  width: 98.9%;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 0px;
+  background-color: #bab074;
+ }
+
+ .jumbotron .truck-svg{
+  background-color: #3d504e;
+  width: 50%;
+  height: 110px;
+ }
+
+ .jumbotron .truck-svg img{
+  width: 82%;
+  padding-top: 15px;
+  padding-left: 30px;
+ }
+
+ .jumbotron h2{
+  color: white;
+  font-size: 19px;
+  padding-top: 40px;
+  text-align: center;
+ }
+
+ .jumbotron .main .btn{
+  width: 280px;
+  border: 2px solid white;
+  border-radius: 0%;
+  background-color: #3d504e;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-weight: 550;
+  text-transform: uppercase;
+ }
+
+ .jumbotron .main .btn:hover{
+  background-color: #b9bf37;
+  transition: all .3s ease-in-out;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .jumbotron .main{
+    display: flex;
+    height: 120px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 25px;
+    background-color: #bab074;
+   }
+
+   .jumbotron .main .btn{
+    width: 330px;
+    height: 70px;
+    margin-top: 0%;
+    margin-left: 15%;
+    font-weight: 550;
+    text-transform: uppercase;
+   }
+   
+ .jumbotron .main .col-lg-3, .jumbotron .main .col-lg-5{
+  display: none;
+ }
+ }
+
+ /*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .motor{
+  padding: 50px;
+  padding-top: 40px;
+  /* height: 790px; */
+ }
+
+ .motor h3{
+  color: #3d504e;
+  text-transform: capitalize;
+ }
+
+ .motor .hr{
+  height: fit-content;
+  background-color: #00000000;
+  border-left: 1px solid rgb(0, 0, 0);
+  padding: 2%;
+  padding-left: 30px;
+  margin-top: 25px;
+ }
+
+ .motor p{
+  padding-top: 0px;
+  padding-left: 0px;
+  font-size: 15px;
+  width: 90%;
+ }
+
+ .motor img{
+  width: 70%;
+  margin-left: 40px;
+ }
+
+ .motor .list{
+  padding-left: 0px;
+  font-size: 14px;
+  margin-top: 30px;
+ }
+
+ .motor .list li{
+  margin-bottom: 10px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .motor{
+    padding: 20px;
+    padding-top: 30px;
+   }
+ }
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+ .views{
+  height: 250px;
+  background-color: #e6e7e8;
+  overflow: hidden;
+ }
+ 
+ .views h6{
+  font-weight: 500;
+  text-align: center;
+  font-size: 19px;
+  margin-bottom: 0px;
+  padding-top: 25px;
+ }
+
+ .views .row{
+  display: inline-flex;
+  width: 101%;
+  margin-top: 30px;
+  background-color: #e6e7e8;
+ }
+
+ .views .col-lg-2{
+  margin-left: 29px;
+ }
+
+ .views .card{
+  width: 110%;
+  height: 100px;
+  padding: 0%;
+  border-radius: 0%;
+  overflow: hidden;
+  border: none;
+  margin-top: 10px;
+  margin-left: 0px;
+ }
+
+ .views .card img{
+  height: 100px;
+ }
+
+ .views p{
+  font-size: 14px;
+  padding-top: 10px;
+  padding: 2%;
+  text-align: center;
+ }
+
+ .views .hover{
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  background: #ffffff00;
+  transform: perspective(1px) translateZ(0);
+  color: black;
+  transition: 0.4s;
+ }
+
+ .views .hover .img{
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 100px;
+  padding: 30px;
+  margin-left: -50%;
+  transition: all .2s ease-in-out;
+ }
+
+ .views .hover:hover .img{
+  display:block;
+  margin-left: 20%;
+  transition: all .3s ease-in-out;
+ }
+
+  .views .hover::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.62);
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .views .hover:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+  
+  .views .hover:hover {
+    color: white;
+    box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+  }
+
+@media (min-width:360px) and (max-width:991px){
+
+  .views{
+    height: fit-content;
+    background-color: #e6e7e8;
+    overflow: hidden;
+   }
+
+  .views .row{
+    display: block;
+    width: 70%;
+    margin-top: 40px;
+    background-color: #3679bc00;
+    margin: auto;
+    padding: 0%;
+   }
+  
+   .views .col-lg-2{
+    margin-left: 0px;
+    margin-top: 20px;
+   }
+  
+   .views .card{
+    width: 100%;
+    height: fit-content;
+    padding: 0%;
+    border-radius: 0%;
+    overflow: hidden;
+    margin: auto;
+   }
+  
+   .views .card img{
+    width: 100%;
+    height: 100%;
+   }
+
+   .views .hover{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #ffffff00;
+    transform: perspective(1px) translateZ(0);
+    color: black;
+    transition: 0.4s;
+   }
+
+   .views .hover .img{
+    width: 100%;
+    padding: 60px;
+    margin-left: -70%;
+    transition: all .2s ease-in-out;
+   }
+
+   .views .hover:hover .img{
+    display:block;
+    margin-left: 0%;
+    transition: all .3s ease-in-out;
+   }
+
+   .views p{
+    font-size: 18px;
+    padding-top: 15px;
+    padding: 1%;
+    text-align: center;
+   }
+}
+
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+ .highlight .main{
+  display: flex;
+  width: 98.9%;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 0px;
+  background-color: #b9bf37;
+  height: 120px;
+ }
+
+ .highlight .handler-svg{
+  background-color: #3d504e;
+  width: 90%;
+  height: 120px;
+ }
+
+ .highlight .handler-svg img{
+  width: 80%;
+  padding-top: 10px;
+  padding-left: 35px;
+ }
+
+ .highlight h2{
+  color: white;
+  font-size: 19px;
+  padding-top: 35px;
+  text-align: left;
+ }
+
+ .highlight h1{
+  color: #3d504e;
+  font-size: 27px;
+  font-weight: 600;
+ }
+
+ .highlight .main .btn{
+  width: 280px;
+  border: 2px solid white;
+  border-radius: 0%;
+  background-color: #3d504e;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-weight: 550;
+  text-transform: uppercase;
+ }
+
+ .highlight .main .btn:hover{
+  background-color: #b9bf37;
+  transition: all .3s ease-in-out;
+ }
+
+@media (min-width:360px) and (max-width:991px) {
+  .highlight .main .col-lg-2, .highlight .main .col-lg-6{
+    display: none;
+  }
+
+  .highlight .main .btn{
+    width: 350px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 0%;
+    background-color: #3d504e;
+    margin-top: 25px;
+    margin-left: 19%;
+    font-weight: 550;
+    text-transform: uppercase;
+   }
+}
+
+/*----------------------------------------
+**--------passenger vehicle page-----------**
+ ------------------------------------------------*/
+ 
+ .passenger-bg .container h4{
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  margin: 15px;
+  font-weight: 600;
+ }
+
+ .passenger-bg{
+  position: fixed;
+  padding: 0%;
+  margin-top: 2.4%;
+  width: 77.7%;
+  margin-left: 1px;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../img/passenger/61022-passenger-vehicles-2-STS-Global.jpg);
+ }
+
+ .passenger-bg h1{
+  margin-top: 200px;
+ }
+
+ .passenger-page .motor .hr{
+  height: fit-content;
+  background-color: #00000000;
+  border-left: 1px solid rgb(0, 0, 0);
+  padding: 2%;
+  padding-left: 30px;
+  margin-top: 25px;
+ }
+
+ .passenger-page .motor p{
+  padding-top: 0px;
+  padding-left: 0px;
+  font-size: 15px;
+  width: 100%;
+ }
+
+ .passenger-page .info{
+  width: 90%;
+  padding-top: 20px;
+  margin: auto;
+ }
+
+ .passenger-page h4{
+  color: #3d504e;
+  text-align: left;
+ }
+
+ .passenger-page p{
+  font-size: 13px;
+  padding-left: 45px;
+ }
+
+ .passenger-page .list ul{
+  /* display: flex; */
+  margin-left: 35px;
+ }
+
+ .passenger-page .list li{
+  text-transform: capitalize;
+  font-size: 15px;
+ }
+
+ .passenger{
+  background-color: rgba(211, 20, 20, 0);
+  position: relative;
+  width: 100%;
+  padding: 0%;
+  margin-left:1px;
+ }
+
+ .passenger-page .vehicle-types{
+  background-color: #00000000;
+ }
+
+ .passenger-page .row{
+  width: 100%;
+ }
+
+ .passenger-page .vehicle-types{
+  padding: 0%;width: 101%;
+  padding-left: 1%;
+ }
+
+ .passenger-page .vehicle-type-inner p{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: -10px;
+  color: #6f6f6f;
+ }
+
+ .passenger-page .vehicle-type-inner:hover p {
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+.passenger-page .vehicle-type-inner hr{
+  height: 0.5px;
+  width: 127px;
+  rotate: 90deg;
+  margin-top: -35%;
+  margin-left: 80.5%;
+  border: 1px solid #696969;
+ }
+
+ .passenger-page .views{
+  height: 250px;
+  background-color: #e6e7e8;
+  overflow: hidden;
+ }
+
+ .passenger-page .views .row{
+  display: inline-flex;
+  width: 101%;
+  margin-top: 30px;
+  background-color: #e6e7e8;
+ }
+
+ .passenger-page .views .col-lg-2{
+  margin-left: 29px;
+ }
+
+ .passenger-page .views .card{
+  width: 110%;
+  height: 100px;
+  padding: 0%;
+  border-radius: 0%;
+  overflow: hidden;
+  border: none;
+  margin-top: 10px;
+  margin-left: 0px;
+ }
+
+ .passenger-page .views .card img{
+  height: 100px;
+ }
+
+ .passenger-page .views p{
+  font-size: 14px;
+  padding-top: 10px;
+  padding: 2%;
+  text-align: center;
+ }
+
+ .passenger-page .views .hover:hover .img{
+  display:block;
+  margin-left: 20%;
+  transition: all .3s ease-in-out;
+ }
+
+ @media (min-width:360px) and (max-width:991px){  
+   .passenger-bg{
+    position: fixed;
+    padding: 0%;
+    margin-top: 1%;
+    width: 100%;
+    height: 400px;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-image: url(../img/passenger/61022-passenger-vehicles-2-STS-Global.jpg);
+   }
+  
+   .passenger-bg .container {
+    margin-top: 84%;
+   }
+
+   .passenger-bg h1{
+    margin-top: 200px;
+    font-size: 40px;
+   }
+  
+   .passenger-page .motor p{
+    padding-top: 0px;
+    padding-left: 0px;
+    font-size: 17px;
+    width: 100%;
+   }
+  
+   .passenger-page .info{
+    width: 100%;
+    padding: 20px 10px;
+    margin: auto;
+   }
+  
+   .passenger-page p{
+    font-size: 16px;
+    padding-left: 25px;
+   }
+   
+   .passenger-page .list ul{
+    margin-left: 25px;
+   }
+  
+   .passenger-page .row{
+    width: 100%;
+   }
+  
+   .passenger-page .vehicle-types{
+    padding: 0%;
+    width: 103%;
+    padding-left: 0%;
+   }
+
+   .passenger-page .vehicle-type-inner{
+    height: 200px;
+   }
+
+   .passenger-page .vehicle-type-inner h5{
+    font-size: 22px;
+    margin: auto;
+    width: 80%;
+   }
+  
+   .passenger-page .vehicle-type-inner p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #6f6f6f;
+    padding: 0%;
+   }
+  
+  .passenger-page .vehicle-type-inner hr{
+    display: none;
+   }
+  
+   .passenger-page .views{
+    height: fit-content;
+    background-color: #e6e7e8;
+    overflow: hidden;
+    margin-top: 0px;
+   }
+  
+   .passenger-page .views .row{
+    display: block;
+    width: 70%;
+    margin-top: 40px;
+    background-color: #3679bc00;
+    margin: auto;
+    padding: 0%;
+   }
+  
+   .passenger-page .views .col-lg-2{
+    margin-left: 0px;
+    margin-top: 20px;
+   }
+  
+   .passenger-page .views .card{
+    width: 100%;
+    height: fit-content;
+    padding: 0%;
+    border-radius: 0%;
+    overflow: hidden;
+    margin: auto;
+   }
+  
+   .passenger-page .views .card img{
+    width: 100%;
+    height: 100%;
+   }
+
+   .passenger-page .views .hover{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #ffffff00;
+    transform: perspective(1px) translateZ(0);
+    color: black;
+    transition: 0.4s;
+   }
+
+   .passenger-page .views .hover .img{
+    width: 100%;
+    padding: 50px;
+    margin-left: -70%;
+    transition: all .2s ease-in-out;
+   }
+
+   .passenger-page .views .hover:hover .img{
+    display:block;
+    margin-left: 0%;
+    transition: all .3s ease-in-out;
+   }
+
+   .passenger-page .views p{
+    font-size: 18px;
+    padding-top: 15px;
+    padding: 1%;
+    text-align: center;
+   }
+
+   .passenger-page .highlight .row{
+    width: 100%;
+    margin-left: -1%;
+   }
+
+   .passenger-page .highlight .btn{
+    margin-left: 4%;
+   }
+ }
+
+ /*----------------------------------------
+**--------station vehicle page-----------**
+ ------------------------------------------------*/
+ 
+ .station-bg{
+  position: fixed;
+  padding: 0%;
+  margin-top: 2.4%;
+  width: 77.7%;
+  margin-left: 1px;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../img/station-wagon/40975-Pickip-car-STS-Global.jpg);
+ }
+
+ .station-bg h1{
+  margin-top: 180px;
+ }
+
+ .station-bg .container h4{
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  margin: 15px;
+  font-weight: 600;
+ }
+
+ .station .vehicles{
+  background-color: rgba(255, 255, 255, 0.134);
+  height: fit-content;
+ }
+
+ .station .jumbotron{
+  margin-top: 00px;
+ }
+
+
+ @media (min-width:360px) and (max-width:991px){
+  .station-bg{
+    position: fixed;
+    margin-top: 1.5%;
+    width: 100%;
+    margin-left: 0px;
+    height: 400px;
+    background-size: 150%;
+    background-position: 44%;
+    background-repeat: no-repeat;
+    background-image: url(../img/station-wagon/40975-Pickip-car-STS-Global.jpg);
+   }
+  
+   .station-bg h1{
+    margin-top: 170px;
+    font-size: 32px;
+   }
+
+   .station-bg .container{
+    margin-top: 79%;
+   }
+  
+   .station .vehicles{
+    background-color: rgba(255, 255, 255, 0.134);
+    height: fit-content;
+   }
+  
+   .station .jumbotron{
+    margin-top: 0px;
+   }
+
+   .station .jumbotron .btn{
+    margin-left: 4%;
+   }
+
+   .station .info p{
+    font-size: 17px;
+   }
+  
+   .station hr{
+    display: none;
+   }
+
+   .station .highlight .row{
+    width: 100%;
+    margin-left: -1%;
+   }
+
+   .station .highlight .btn{
+    margin-left: 5%;
+   }
+  
+ }
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+
+ .trucks-bg{
+  position: fixed;
+  padding: 0%;
+  margin-top: 2.4%;
+  width: 77.7%;
+  margin-left: 1px;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../img/trucks/52670-Trucks-STS-Global.jpg);
+ }
+
+ .trucks .vehicle-type-inner{
+  height: 210px;
+ }
+
+ .trucks .vehicle-type-inner p{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-left: -15%;
+  text-align: center;
+  color: #6f6f6f;
+ }
+
+ .trucks .vehicle-type-inner hr{
+  margin-left: 86%;
+ }
+
+@media (min-width:360px) and (max-width:991px){
+  .trucks-bg{
+    position: fixed;
+    padding: 0%;
+    margin-top: 2.4%;
+    width: 100%;
+    margin-left: 1px;
+    height: 400px;
+    background-size: 150%;
+    background-position: 44%;
+    background-repeat: no-repeat;
+    background-image: url(../img/trucks/52670-Trucks-STS-Global.jpg);
+   }
+
+   .trucks .vehicle-type-inner{
+    height: 200px;
+   }
+
+   .trucks .vehicle-type-inner p{
+    font-size: 16px;
+    padding: 0%;
+    margin: auto;
+   }
+  
+   .trucks .vehicle-type-inner hr{
+    margin-left: 86%;
+   }
+
+   .trucks .jumbotron .btn{
+    margin-left: 4%;
+   }
+}
+
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+ .buses-bg{
+  position: fixed;
+  padding: 0%;
+  margin-top: 2.4%;
+  width: 77.7%;
+  margin-left: 1px;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../img/buses/41151-Nes-Buses-STS-Global.jpg);
+ }
+
+ .buses .vehicles{
+  padding-top: 30px;
+ }
+
+ .buses .info img{
+  float: right;
+  width: 40%;
+  padding: 2%;
+ }
+
+ .buses .vehicle-type-inner{
+  height: 210px;
+ }
+
+ .buses .vehicle-type-inner:any-link{
+  text-decoration: none;
+ }
+
+ .buses .vehicle-type-inner p{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-left: -15%;
+  text-align: center;
+  color: #6f6f6f;
+ }
+
+ .buses .vehicle-type-inner hr{
+  margin-left: 86%;
+ }
+
+@media (min-width:360px) and (max-width:991px) {
+  .buses-bg{
+    position: fixed;
+    padding: 0%;
+    margin-top: 0%;
+    width: 100%;
+    margin-left: 1px;
+    height: 400px;
+    background-size: 150%;
+    background-position: 44%;
+    background-repeat: no-repeat;
+    background-image: url(../img/buses/41151-Nes-Buses-STS-Global.jpg);
+   }
+
+   .buses-bg .container{
+    margin-top: 82%;
+   }
+
+   .buses .vehicle-type-inner{
+    height: 200px;
+   }
+
+   .buses .vehicle-type-inner p{
+    font-size: 16px;
+    padding: 0%;
+    margin: auto;
+   }
+
+   .buses .jumbotron .btn{
+    margin-left: 4%;
+   }
+}
+
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .utility-bg{
+  position: fixed;
+  padding: 0%;
+  margin-top: 2.4%;
+  width: 77.7%;
+  margin-left: 1px;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../img/utility/85071-utility-vehicles--STS-Global.jpg);
+ }
+
+ .utility .info img{
+  float: right;
+  width: 40%;
+  padding: 2%;
+  margin-top: 30px;
+ }
+
+ .utility .row{
+  width: 101.1%;
+ }
+
+ .utility .global{
+  background-color: #bab074;
+  /* height: 200px; */
+ }
+
+ .utility .global h5{
+  padding-top: 35px;
+  text-align: center;
+  width: 70%;
+  font-weight: 600;
+  font-size: 18px;
+  margin: auto;
+ }
+
+ .utility .global .box{
+  background-color: rgba(153, 205, 50, 0);
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  margin-top: 20px;
+ }
+
+ .utility .global .box img{
+  margin-left: 25%;
+  width: 50%;
+ }
+
+ .utility .global .box p{
+  text-align: center;
+  padding-top: 10px;
+  margin-left: -27%;
+ }
+
+ .utility .global .container{
+  border: none;
+  background-color: rgb(163, 163, 163);
+  max-width: 353px;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 30px;
+  right: -1.89%;
+  height: 350px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .utility-bg{
+    position: fixed;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    margin-left: 1px;
+    height: 400px;
+    background-size: 165%;
+    background-position: 44%;
+    background-repeat: no-repeat;
+    background-image: url(../img/utility/85071-utility-vehicles--STS-Global.jpg);
+   }
+
+   .utility-bg h1{
+    font-size: 35px;
+    margin-top: 200px;
+   }
+
+   .utility .info img{
+    float: right;
+    width: 40%;
+    padding: 2%;
+    margin-top: 30px;
+   }
+  
+   .utility .row{
+    width: 100%;
+    margin-left: 0;
+   }
+  
+   .utility .global{
+    background-color: #bab074;
+    /* height: 200px; */
+   }
+  
+   .utility .global h5{
+    padding-top: 35px;
+    text-align: center;
+    width: 70%;
+    font-weight: 600;
+    font-size: 18px;
+    margin: auto;
+   }
+  
+   .utility .global .box{
+    background-color: rgba(153, 205, 50, 0);
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+   }
+  
+   .utility .global .box img{
+    margin-left: 25%;
+    width: 50%;
+   }
+  
+   .utility .global .box p{
+    text-align: center;
+    padding-top: 10px;
+    margin-left: -27%;
+   }
+  
+   .utility .global .container{
+    border: none;
+   display: none;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .accessories .hero-bg{
+  background-image: url(../img/accessories/25767-Vehicle-Accessories-STS-Global.jpg);
+ }
+
+ .accessories .info img{
+  float: right;
+  width: 30%;
+  padding: 2%;
+  margin-top: 30px;
+ }
+
+ .accessories .related-products{
+  /* width: 33.3%; */
+  background-color: #00000010;
+  padding: 25px;
+  padding-top: 30px;
+ }
+
+ .accessories #vehicles{
+  width: 101.18%;
+  background-color: rgba(194, 9, 9, 0);
+ }
+
+
+ .accessories .related-products .row{
+  display: inline-flex;
+  margin-top: 30px;
+ }
+
+ .accessories .related-products .inner{
+  background-color: #01447e00;
+  padding: 10px;
+  padding-top: 40px;
+ }
+
+ .accessories .related-products .products{
+  margin-top: 20px;
+ }
+
+ .accessories .related-products .inner h5{
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 22px;
+  margin-left: -13px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+ }
+
+ .accessories .related-products .card{
+  width: 54%;
+  height: 85px;
+  padding: 0%;
+  border-radius: 0%;
+  overflow: hidden;
+  border: none;
+  background-color: #000;
+ }
+
+ .accessories .related-products .card img{
+  width: 165px;
+  height: 85px;
+ }
+ 
+ .accessories .related-products p{
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 4%;
+  width: 46%;
+  word-wrap: break-word;
+ }
+
+ .accessories .vehicles a:any-link{
+  color: #b9bf37;
+  text-decoration: none;
+ }
+
+ .accessories .hover{
+  height: 100px;
+  width: 167px;
+  position: absolute;
+  background: #ffffff00;
+  transform: perspective(1px) translateZ(0);
+  color: black;
+  transition: 0.4s;
+ }
+
+ .accessories .hover .img{
+  color: rgba(255, 255, 255, 0);
+  display: block;
+  width: 112px;
+  padding: 30px;
+  margin-left: -70%;
+  transition: all .3s ease-in-out;
+ }
+
+ .accessories .hover:hover .img{
+  display:block;
+  transition: all .3s ease-in-out;
+  margin-left: 0%;
+ }
+
+  .accessories .related-products .hover::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.62);
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+    transition: 0.4s;
+  }
+
+  .accessories .related-products .hover:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .accessories .related-products .hover:hover {
+    color: white;
+    box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+  }
+
+ @media (min-width:360px) and (max-width:991px){
+  .accessories .hero-bg{
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 1px;
+    background-size: 165%;
+    background-position: 44%;
+    background-repeat: no-repeat;
+    background-image: url(../img/accessories/25767-Vehicle-Accessories-STS-Global.jpg);
+   }
+
+   .accessories .hero-bg .container{
+    display: none;
+   }
+  
+   .accessories .info img{
+    float: right;
+    width: 30%;
+    padding: 2%;
+    margin-top: 30px;
+   }
+  
+   .accessories .related-products{
+    /* width: 33.3%; */
+    background-color: #00000010;
+    padding: 25px;
+    padding-top: 30px;
+   }
+  
+   .accessories #vehicles{
+    width: 100%;
+    margin-left: 0;
+    background-color: rgb(255, 255, 255);
+   }
+
+   .accessories .related-products .card img{
+    width: 177px;
+    height: 85px;
+   }
+
+   .accessories .jumbotron .btn{
+    margin-left: 4%;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .made .hero-bg{
+  background-image: url(../img/tailor-made/19624-Supersucker-Truck-2-STS-Global.jpg);
+ }
+
+ .made .vehicles{
+  height: fit-content;
+  padding: 10px;
+  padding-top: 9px;
+  padding-bottom: 0px;
+ }
+
+ .made .info img{
+  float: right;
+  width: 32%;
+  padding: 1%;
+  margin-left: 0px;
+ }
+
+ .made .info p{
+  font-size: 13px;
+ }
+
+ .made .info li{
+  font-size: 13px;
+ }
+
+ .made .row{
+  width: 101.1%;
+  height: fit-content;
+ }
+
+ .made .global{
+  background-color: #bab074;
+ }
+
+ .made .global h5{
+  padding-top: 45px;
+  text-align: center;
+  width: 70%;
+  font-weight: 600;
+  font-size: 18px;
+  margin: auto;
+ }
+
+ .made .global .box{
+  background-color: rgba(153, 205, 50, 0);
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  margin-top: 30px;
+ }
+
+ .made .global .box img{
+  margin-left: 25%;
+  width: 50%;
+ }
+
+ .made .global .box p{
+  text-align: center;
+  padding-top: 10px;
+  margin-left: -27%;
+ }
+
+ .made .global .container{
+  border: none;
+  background-color: rgb(163, 163, 163);
+  max-width: 353px;
+  margin-top: 37px;
+  margin-left: 0%;
+  padding: 30px;
+  right: -1.89%;
+  height: 350px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .made .hero-bg{ 
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 1px;
+    background-image: url(../img/tailor-made/19624-Supersucker-Truck-2-STS-Global.jpg);
+   }
+  
+   .made .vehicles{
+    height: fit-content;
+    padding: 10px;
+    padding-top: 9px;
+    padding-bottom: 0px;
+   }
+  
+   .made .row{
+    width: 100%;
+    margin: 0;
+    height: fit-content;
+   }
+  
+   .made .global{
+    background-color: #bab074;
+   }
+
+  
+   .made .global .box img{
+    margin-left: 25%;
+    width: 50%;
+   }
+  
+   .made .global .box p{
+    text-align: center;
+    padding-top: 10px;
+    margin-left: -27%;
+   }
+  
+   .made .global .container{
+    border: none;
+    display: none;
+   }
+
+   .made .jumbotron{
+    margin-left: -5%;
+   }
+
+   .made .jumbotron .btn{
+    margin-left: 4%;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+***--------- Spare parts page----------------***
+**
+ ------------------------------------------------*/
+ 
+ .spare-page .hero-bg{
+  background-image: url(../img/spare-parts/15928-Auto-Parts-STS-Global.jpg);
+ }
+
+ .spare-page .vehicles a:any-link{
+  text-decoration: none;
+ }
+
+ .spare-page .vehicle-type-inner{
+  padding-top: 50px;
+  height: 270px;
+ }
+
+ .spare-page .vehicle-type-inner img{
+  width: 45%;
+ }
+
+ .spare-page .vehicle-type-inner p{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-left: -15%;
+  text-align: center;
+  color: #6f6f6f;
+ }
+
+ .spare-page .motor .list ul{
+  /* padding-top: 0px; */
+  padding-left: 10px;
+  margin: 0px;
+  margin-top: -20px;
+ }
+
+ .spare-page .vehicle-type-inner hr{
+  margin-left: 86%;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .spare-page .hero-bg{
+    margin-top: 31%;
+    width: 100%;
+    margin-left: 1px;
+    background-size: 165%;
+    background-position: 44%;
+    background-repeat: no-repeat;
+    background-image: url(../img/spare-parts/15928-Auto-Parts-STS-Global.jpg);
+   }
+
+   .spare-page .hero-bg .container{
+    margin-top: 65%;
+   }
+
+   .spare-page .vehicle-type-inner{
+    padding-top: 20px;
+    height: 220px;
+   }
+  
+   .spare-page .vehicle-type-inner img{
+    width: 35%;
+   }
+  
+   .spare-page .vehicle-type-inner p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: -5px;
+    margin-left: 0%;
+    text-align: center;
+    color: #6f6f6f;
+   }
+
+   .spare-page .jumbotron .btn{
+    margin-left: 1%;
+   }
+  
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ .car-parts .hero-bg{
+  background-image: url(../img/car-parts/51340-Car-parts-STS-Global.jpg);
+ }
+
+ .info span a:any-link{
+  color: #bab074;
+  text-decoration: none;
+ }
+
+ .car-parts .vehicle-types a{
+  text-decoration: none;
+ } 
+
+ .car-parts .related-products{
+  height: 360px;
+  padding-top: 0%;
+  padding-left: 16px;
+  background-color: #00000000;
+  width: 32.2%;
+ }
+
+ .car-parts  .info h4{
+  color: #3d504e;
+  padding-top: 30px;
+ }
+
+ .car-parts  .info p{
+  padding-left: 40px;
+  font-size: 14px;
+ }
+
+ .car-parts  .info .list{
+  margin-left: 40px;
+  font-size: 14px;
+ }
+
+ .car-parts .info img{
+  width: 90%;
+  padding: 1%;
+  margin-top: 30px;
+ }
+
+ .car-parts .vehicles .row{
+  width: 101.1%;
+  margin-left: -1.1%;
+  background-color: #ebebeb;
+ }
+
+ .car-parts .row{
+  width: 101.1%;
+ }
+
+ .car-parts .global{
+  background-color: #3d504e;
+ }
+
+ .car-parts .global h5{
+  padding-top: 35px;
+  text-align: center;
+  width: 70%;
+  font-weight: 600;
+  font-size: 18px;
+  margin: auto;
+  color: #fff;
+ }
+
+ .car-parts .global .box{
+  background-color: rgba(153, 205, 50, 0);
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  margin-top: 30px;
+ }
+
+ .car-parts .global .box img{
+  margin-left: 18%;
+  width: 70%;
+ }
+
+ .car-parts .global .box p{
+  text-align: center;
+  padding-top: 10px;
+  margin-left: 0%;
+  color: #fff;
+ }
+
+ .toyota .info .list{
+  margin-left: 40px;
+  font-size: 14px;
+  /* margin-top: -150px; */
+ }
+
+ .toyota .info .list img{
+  width: 70%;
+  margin-top: -10px;
+ }
+
+ .toyota .info img{
+  float: right;
+  width: 40%;
+  padding: 2%;
+  margin-top: 30px;
+ }
+
+ .toyota .row{
+  width: 101.1%;
+ }
+
+ .toyota .global{
+  padding: 0%;
+  background-color: #3d504e;
+ }
+
+ .toyota .global h5{
+  padding-top: 65px;
+  text-align: center;
+  width: 70%;
+  font-weight: 500;
+  font-size: 14px;
+  margin: auto;
+  color: #fff;
+ }
+
+ .toyota .global .box{
+  background-color: rgba(153, 205, 50, 0);
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  margin-top: 30px;
+ }
+
+ .toyota .global .box img{
+  margin-left: 24%;
+  width: 50%;
+ }
+
+ .toyota .global .box p{
+  text-align: center;
+  padding-top: 10px;
+  margin-left: -22%;
+  color: #fff;
+ }
+
+ .toyota .global .container{
+  background-color: grey;
+  border: none;
+  max-width: 353px;
+  margin-top: 65px;
+  margin-left: 0%;
+  padding: 40px;
+  right: .9%;
+  height: 350px;
+ }
+
+ .benz .vehicles{
+  padding: 0 50px;
+ }
+
+ .benz .info img{
+  float: right;
+  width: 35%;
+  padding: 2%;
+  margin-top: 0px;
+ }
+
+ .benz .info ul li{
+  font-size: 13px;
+ }
+
+ .benz .global{
+  padding: 0%;
+  height: 799px;
+  background-color: #e6e6e6a6;
+ }
+
+ .benz .global h5{
+  padding-top: 25px;
+  color: #000;
+ }
+
+ .benz .global .box{
+  padding: 10px;
+  margin-top: 10px;
+ }
+
+ .benz .global .box img{
+  margin-left: 25%;
+  width: 45%;
+ }
+
+ .benz .global .box p{
+  padding-top: 8px;
+  margin-left: -35%;
+  color: #000;
+ }
+
+ .benz .global .container{
+  max-width: 353px;
+  margin-top: 0px;
+  padding: 0 40px;
+  height: 300px;
+ }
+
+ .ford .global{
+  background-color: #3d504e;
+ }
+
+ .ford .global .box img{
+  margin-left: 13%;
+  width: 90%;
+  margin: auto;
+ }
+
+ .ford .global .box p{
+  padding-top: 8px;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  margin: auto;
+  margin-left: 2%;
+  padding: 0%;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+   .car-parts .vehicles .related-products {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+    margin: 0%;
+   }
+
+   .car-parts .info img{
+    width: 90%;
+    padding: 1%;
+    margin-top: 30px;
+   }
+  
+   .car-parts .row{
+    width: 100%;
+    margin: 0%;
+   }
+
+  
+   .car-parts .jumbotron .btn{
+    margin-left: 5%;
+   }
+
+   .car-parts .highlight .btn{
+    margin-left: 5%;
+   }
+
+   .toyota .links{
+    margin-top: -15%;
+   }
+
+   .toyota .page-title{
+    margin-top: 35%;
+   }
+
+   .toyota .global .container{
+    display: none;
+   }
+
+   .toyota .highlight .row{
+    width: 100%;
+    margin: 0;
+   }
+
+   .toyota .highlight .btn{
+    margin-left: 2%;
+   }
+  
+   .benz .global{
+    padding: 0%;
+    height: fit-content;
+    background-color: #e6e6e6a6;
+   }
+  
+  
+   .benz .global .container{
+    max-width: 353px;
+    display: none;
+   }
+  
+   .ford .global{
+    background-color: #3d504e;
+   }
+  
+   .ford .global .box img{
+    margin-left: 13%;
+    width: 90%;
+    margin: auto;
+   }
+  
+   .ford .global .box p{
+    padding-top: 8px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    margin: auto;
+    margin-left: 2%;
+    padding: 0%;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+
+ .truck-parts .list img{
+  width: 50%;
+ }
+
+ .truck-parts .info .img{
+  width: 65%;
+  margin-left: 100px;
+ }
+
+ .truck-parts .vehicles .row{
+  width: 101.1%;
+  padding: 0%;
+ }
+
+ .truck-parts .vehicles .related-products{
+  width: 32.1%;
+  height: fit-content;
+  margin-left: 1.2%;
+  padding: 20px;
+ }
+
+ .truck-parts .vehicles .related-products .inner{
+  background-color: #01447e00;
+  padding: 10px;
+  padding-top: 40px;
+ }
+
+ .truck-parts .vehicles .related-products .card{
+  width: 53%;
+ }
+
+ .truck-parts .vehicles .related-products p{
+  font-size: 14px;
+  padding-top: 10px;
+  width: 46%;
+  padding-left: 10px;
+  word-wrap: break-word;
+ }
+
+ .truck-parts .cert{
+  width: 113.3%;
+  margin-bottom: -20px;
+  margin-left: -6.8%;
+  padding: 30px;
+  background-color: rgb(208, 208, 208);
+ }
+
+ .truck-parts .cert .row{
+  display: flex;
+  width: 110%;
+ }
+
+ .truck-parts .cert img{
+  width: 140%;
+  margin-left: -15px;
+ }
+
+ .truck-parts .cert .row p{
+  width: 90%;
+  padding-top: 20px;
+  margin-left: 20px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+ 
+  .truck-parts .hero-bg .container{
+  display: none;
+ }
+
+ .truck-parts .vehicles .row{
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+ }
+
+ .truck-parts .vehicles .related-products{
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+ }
+
+ .truck-parts .vehicles .related-products .card{
+  width: 90%;
+  margin-left: 5%;
+ }
+
+ .truck-parts .vehicles .related-products p{
+  font-size: 14px;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .truck-parts .cert{
+  width: 112%;
+  margin-bottom: -20px;
+  margin-left: -5.8%;
+  padding: 30px;
+  background-color: rgb(208, 208, 208);
+ }
+
+ .truck-parts .cert .row{
+  display: flex;
+  width: 80%;
+ }
+
+ .truck-parts .jumbotron{
+  width: 100%;
+  margin-left: 1%;
+ }
+
+ .truck-parts .jumbotron .btn{
+  margin-left: 1%;
+ }
+
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .heavy-duty-parts .motor .hr img{
+  width: 100%;
+ }
+
+ .heavy-duty-parts #vehicles .row{
+  width: 101.1%;
+ }
+
+ .heavy-duty-parts .vehicles{
+  padding: 70px;
+  padding-top: 20px;
+ }
+
+ .heavy-duty-parts .vehicles .info p{
+  padding-left: 40px;
+  padding-top: 30px;
+  font-size: 15px;
+ }
+
+ .heavy-duty-parts .info h4{
+  color: #3d504e;
+ }
+
+ .heavy-duty-parts .vehicles .info img{
+  width: 50%;
+  padding-left: 40px;
+  float: right;
+ }
+
+ .heavy-duty-parts .global{
+  background-color: #f5f3eb;
+ }
+
+ .heavy-duty-parts .global h5{
+  padding-top: 50px;
+  text-align: center;
+  font-size: 15px;
+  width: 55%;
+  margin: auto;
+ }
+
+ .heavy-duty-parts .global .box{
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+ }
+
+ .heavy-duty-parts .global img{
+  width: 60%;
+  margin-left: 20%;
+ }
+
+ .heavy-duty-parts .global p{
+  text-align: center;
+  padding-top: 10px;
+ }
+ @media (min-width:360px) and (max-width:991px){
+ .heavy-duty-parts .hero-bg{
+  position: fixed;
+  margin-top: 27%;
+  width: 100%;
+  margin-left: 1px;
+  background-size: 165%;
+  background-position: 44%;
+  background-repeat: no-repeat;
+ }
+
+ .heavy-duty-parts .hero-bg h1{
+  font-size: 35px;
+ }
+
+ .heavy-duty-parts .hero-bg .container{
+  /* margin-top: 1%; */
+  display: none;
+ }
+
+ .heavy-duty-parts .links{
+  margin-top: 18%;
+ }
+
+ .heavy-duty-parts .vehicles .info p{
+  padding-left: 10px;
+  padding-top: 30px;
+  font-size: 15px;
+ }
+
+ .heavy-duty-parts .info h4{
+  color: #3d504e;
+  padding: 0%;
+ }
+
+ .heavy-duty-parts .highlight .btn{
+  margin-left: 10%;
+ }
+
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .tires .hero-bg{
+  background-image: url(../img/tires/77195-Tires-11-STS-Global.jpg);
+ }
+
+ .tires .vehicles .info{
+  padding: 5px 40px;
+ }
+
+ .tires .related-products{
+  height: 1300px;
+  width: 32.1%;
+  margin-left: 1.2%;
+  padding: 20px;
+  padding-top: 50px;
+ }
+
+ .tires .vehicles .row{
+  width: 101.1%;
+  padding: 0%;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+ 
+  .tires .hero-bg{
+    margin-top: 27%;
+    width: 100%;
+    margin-left: 1px;
+    background-size: 165%;
+    background-position: 44%;
+    background-image: url(../img/tires/77195-Tires-11-STS-Global.jpg);
+   }
+
+   .tires .hero-bg .container{
+    display: none;
+   }
+
+   .tires #scroll-effect{
+    margin-top: 0%;
+   }
+  
+   .tires .vehicles .info{
+    padding: 5px 15px;
+   }
+  
+   .tires .related-products{
+    height: fit-content;
+    width: 100%;
+    margin-left: 0%;
+    padding: 0px;
+    padding-top: 50px;
+    margin: auto;
+   }
+  
+   .tires .vehicles .row{
+    width: 100%;
+    padding: 0%;
+   }
+
+   .tires .jumbotron .btn{
+    margin-left: 4%;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ .heavy-duty-equipment .hero-bg{
+  background-image: url(../img/heavy-duty-equipment/33824-heavy-Duty-Equipment-STS-Global.jpg);
+ }
+
+ .heavy-duty-equipment .vehicles .info p{
+  padding-left: 40px;
+  font-size: 15px;
+ }
+
+ .heavy-duty-equipment .info{
+  padding: 5px 50px;
+ }
+
+ .heavy-duty-parts #vehicles .row{
+  width: 101.1%;
+ }
+
+ .heavy-duty-parts .vehicles{
+  padding: 70px;
+  padding-top: 20px;
+ }
+
+ .heavy-duty-equipment .related-products{
+  height: 1300px;
+  width: 32.1%;
+  margin-left: 1.2%;
+  padding: 20px;
+  padding-top: 50px;
+ }
+
+ .heavy-duty-equipment .vehicles .row{
+  width: 101.1%;
+  padding: 0%;
+ }
+
+ .heavy-duty-equipment .vehicles .related-products p{
+  font-size: 14px;
+  padding-top: 10px;
+  width: 46%;
+  padding-left: 10px;
+  word-wrap: break-word;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .heavy-duty-equipment .hero-bg{
+    margin-top: 30%;
+    width: 100%;
+    margin-left: 1px;
+    background-size: 165%;
+    background-position: 44%;
+    background-image: url(../img/heavy-duty-equipment/33824-heavy-Duty-Equipment-STS-Global.jpg);
+   }
+
+   .heavy-duty-equipment .hero-bg .container{
+    display: none;
+   }
+
+   .heavy-duty-equipment .hero-bg h1{
+    font-size: 35px;
+   }
+
+   .heavy-duty-equipment #scroll-effect{
+    margin-top: 0%;
+   }
+
+   .heavy-duty-equipment .info{
+    padding: 5px 20px;
+   }
+
+   .heavy-duty-equipment .vehicles .info p{
+    padding-left: 10px;
+    font-size: 15px;
+   }
+
+   .heavy-duty-equipment .related-products{
+    height: fit-content;
+    width: 100%;
+    margin-left: 5%;
+    /* padding: 20px; */
+    padding-top: 50px;
+   }
+  
+   .heavy-duty-equipment .vehicles .row{
+    width: 100%;
+    padding: 0%;
+   }
+  
+   .heavy-duty-equipment .vehicles .row .card{
+    width: 90%;
+    margin: auto;
+   }
+
+   .heavy-duty-equipment .vehicles .related-products p{
+    font-size: 14px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+   }
+
+   .heavy-duty-equipment .jumbotron .row{
+    width: 100%;
+    margin: auto;
+   }
+
+   .heavy-duty-equipment .jumbotron .btn{
+    margin-left: 0;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .construction .hero-bg{
+  background-image: url(../img/construction/80334-Construction-and-Building-materials.jpg);
+ }
+
+ .construction .hero-bg h1{
+  margin-top: 180px;
+ }
+
+ .construction .info .list li{
+  font-size: 13px;
+ }
+
+ .construction .related-products{
+  height: 1050px;
+  width: 32.1%;
+  margin-left: 1.2%;
+  padding: 20px;
+  padding-top: 50px;
+ }
+
+ .construction .vehicles .row{
+  width: 101.1%;
+  padding: 0%;
+ }
+
+ .construction .vehicles .related-products p{
+  font-size: 14px;
+  padding-top: 10px;
+  width: 46%;
+  padding-left: 10px;
+  word-wrap: break-word;
+ }
+
+ .work .hero-bg h1, .cons .hero-bg h1 {
+  margin-top: 220px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .construction .hero-bg{
+    margin-top: 30%;
+    width: 100%;
+    margin-left: 1px;
+    background-size: 165%;
+    background-position: 44%;
+    background-image: url(../img/heavy-duty-equipment/33824-heavy-Duty-Equipment-STS-Global.jpg);
+   }
+
+   .construction .links ul li{
+    /* padding: 0px 0px; */
+    font-size: 14px;
+   }
+
+   .construction .hero-bg .container{
+    display: none;
+   }
+
+   .construction .hero-bg h1{
+    font-size: 31px;
+    margin-top: 60px;
+   }
+
+   .construction #scroll-effect{
+    margin-top: 0%;
+    background-color: white;
+   }
+
+   .construction .info{
+    padding: 5px 20px;
+   }
+
+   .construction .vehicles .info p{
+    padding-left: 10px;
+    font-size: 15px;
+   }
+
+   .construction .related-products{
+    height: fit-content;
+    width: 100%;
+    margin-left: 6%;
+    padding: 20px;
+    padding-top: 50px;
+   }
+  
+   .construction .vehicles .row{
+    width: 100%;
+    padding: 0%;
+   }
+   
+   .construction .vehicles .row .card{
+    width: 90%;
+    margin: auto;
+   }
+  
+   .construction .vehicles .related-products p{
+    font-size: 14px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+   }
+
+   .construction .jumbotron .row{
+    width: 100%;
+    margin: auto;
+   }
+
+   .construction .jumbotron .btn{
+    margin-left: 0;
+   }
+
+   .work .hero-bg h1, .cons .hero-bg h1{
+    font-size: 31px;
+    margin-top: 140px;
+   }
+
+   .work .jumbotron{
+    margin-top: 100px;
+   }
+
+   .cons .jumbotron{
+    margin-top: 300px;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .disaster .global h5{
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 10%;
+ }
+
+ .disaster .global .box{
+  width: 65%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 2% 5%;
+ }
+
+ .disaster .info{
+  padding: 10px 70px;
+ }
+
+ .disaster .global .container{
+  margin-top: 30px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  .disaster .hero-bg{
+    margin-top: 30%;
+    width: 100%;
+    margin-left: 1px;
+    background-size: 165%;
+    background-position: 44%;
+    background-image: url(../img/heavy-duty-equipment/33824-heavy-Duty-Equipment-STS-Global.jpg);
+   }
+
+   .disaster .links ul li{
+    /* padding: 0px 0px; */
+    font-size: 14px;
+   }
+
+   .disaster .hero-bg .container{
+    display: none;
+   }
+
+   .disaster .hero-bg h1{
+    font-size: 35px;
+    margin-top: 150px;
+   }
+
+   .disaster #scroll-effect{
+    margin-top: 0%;
+    background-color: white;
+   }
+
+   .disaster .info{
+    padding: 5px 20px;
+   }
+
+   .disaster .vehicles .info p{
+    padding-left: 10px;
+    font-size: 15px;
+   }
+
+   .disaster .jumbotron .row{
+    width: 100%;
+    margin: -1%;
+   }
+
+   .disaster .jumbotron .btn{
+    margin-left: 0;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .contact .row .info{
+  padding: 25px;
+  padding-left: 60px;
+ }
+
+ .contact .row .info img{
+  margin-left: -10px;
+ }
+
+ .contact .row .info h4{
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 80px;
+ }
+
+ .contact .row .info p{
+  margin-top: 20px;
+  padding-left: 80px;
+  font-size: 14px;
+ }
+
+ .contact .row .map{
+  background-color: #696969;
+  width: 48.8%;
+  margin-left: 1px;
+  margin-bottom: 3px;
+  padding: 0%;
+ }
+
+ .contact #america{
+  border:0;
+  width: 48.8%;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  
+  .contact #scroll-effect{
+    margin-top: 0%;
+    background-color: white;
+   }
+  
+  .contact .row .map , .contact #america{
+    background-color: #696969;
+    width: 100%;
+    height: 200px;
+    margin-left: 1px;
+    margin-bottom: 3px;
+    padding: 0%;
+   }
+
+   .contact .row .info{
+    padding: 25px;
+    padding-left: 30px;
+   }
+  
+   .contact .row .info img{
+    margin-left: -10px;
+   }
+  
+   .contact .row .info h4{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 60px;
+   }
+  
+   .contact .row .info p{
+    margin-top: 20px;
+    padding-left: 60px;
+    font-size: 14px;
+   }
+
+   .delivery .row .btn{
+    margin-left: 0;
+   }
+ }
+
+ /*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .certificate img{
+  width: 70%;margin-left: 15%;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+ .certificate .page-title{
+  margin-top: 30%;
+ }
+
+ .certificate img{
+  width: 100%;
+  margin-left: 0%;
+ }
+ }
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ @media (min-width:360px) and (max-width:991px){
+ 
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .cases .stories .col-lg-6{
+  border-color: yellowgreen;
+  height: 270px;
+ }
+
+ .cases .stories .info{
+  padding: 40px;
+ }
+
+ .cases .stories .info h4{
+  color: #3d504e;
+ }
+
+ .cases .stories .info p{
+  font-size: 14px;
+  padding-left: 40px;
+  width: 80%;
+ }
+
+ .cases .stories .info .btn{
+  width: 250px;
+  margin-left: 22%;
+  border: 3px solid #bab074;
+  border-radius: 0%;
+  background-color: white;
+  color: #3d504e;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+ }
+
+ .cases .stories .img{
+  overflow: hidden;
+  width: 48.8%;
+  margin-left: 1px;
+  margin-bottom: 2px;
+ }
+
+ .cases .stories .img img{
+  width: 100%;
+ }
+
+ .cases .stories .page{
+  width: 98.9%;
+  height: 100px;
+  margin-top: -6px;
+  background-color: #3d504e;
+ }
+
+ .cases .stories .pagination {
+  display: flex;
+  width: 24%;
+  margin: auto;
+  padding-top: 25px;
+ }
+
+ .cases .stories .page .box{
+  border: 1px solid #bab074;
+  height: fit-content;
+  padding: 7px;
+  padding-left: 012px;
+  width: 36px;
+  background-color: white;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  
+  .cases .page-title{
+    margin-top: 32%;
+  }
+  
+  .cases .stories .col-lg-6{
+    border-color: yellowgreen;
+    height: 270px;
+   }
+  
+   .cases .stories .info{
+    padding: 20px;
+   }
+  
+   .cases .stories .info p{
+    font-size: 14px;
+    padding-left: 15px;
+    width: 100%;
+   }
+  
+   .cases .stories .info .btn{
+    width: 300px;
+    margin-left: 5%;
+   }
+  
+   .cases .stories .img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-bottom: 2px;
+   }
+  
+   .cases .stories .img img{
+    width: 100%;
+   }
+  
+   .cases .stories .page{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    background-color: #3d504e;
+   }
+  
+   .cases .stories .pagination {
+    display: flex;
+    width: 64%;
+    margin: auto;
+    padding-top: 25px;
+   }
+  
+   .cases .stories .page .box{
+    border: 1px solid #bab074;
+    height: fit-content;
+    padding: 7px;
+    padding-left: 12px;
+    width: 36px;
+    background-color: white;
+   }
+
+   .cases .jumbotron .btn{
+    margin-left: 2%;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ 
+ .search .search-bar{
+  height: 500px;
+  background-color: white;
+ }
+
+ .search input{
+  padding: 2px;
+  height: 35px;
+  width: 900px;
+  margin-top: 70px;
+  margin-left: 50px;
+  border: 2px solid black
+ }
+
+ .search input::placeholder{
+  color: rgb(0, 0, 0);
+  text-align: left;
+  font-size: 12px;
+  padding-left: 10px;
+ }
+
+ .search .btn-info{
+  margin-left: -10px;
+  margin-top: -1px;
+  background-color: white;
+  border: 2px solid black;
+  border-left: none;
+  border-radius: 0%;
+  height: 35px;
+ }
+
+ @media (min-width:360px) and (max-width:991px){
+  
+  .search .page-title{
+    margin-top: 32%;
+  }
+  
+  .search .search-bar{
+    height: 700px;
+    background-color: white;
+   }
+  
+   .search input{
+    padding: 2px;
+    height: 35px;
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 2%;
+    border: 2px solid black
+   }
+  
+   .search input::placeholder{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 12px;
+    padding-left: 10px;
+   }
+  
+   .search .btn-info{
+    margin-left: -10px;
+    margin-top: -4px;
+    background-color: white;
+    border: 2px solid black;
+    border-left: none;
+    border-radius: 0%;
+    height: 35px;
+   }
+ }
+
+ 
+/*----------------------------------------
+**
+ ------------------------------------------------*/
+ .slide .container-fluid {
+  width: 100%;
+  padding: 0%;
+  height: fit-content;
+  margin-bottom: -41%;
+}
+
+.slide .mySlides {
+  display: none;
+}
+
+.slide .cursor {
+  cursor: pointer;
+}
+
+.slide .prev,
+.slide .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: rgb(198, 198, 198);
+  font-weight:  lighter;
+  font-size: 80px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  text-decoration: none;
+}
+
+.slide .next {
+  right: 30px;
+  border-radius: 3px 0 0 3px;
+  /* margin-left: -100px; */
+  position: absolute;
+}
+
+.slide .prev:hover,
+.slide .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide .caption-container {
+  margin-top: -120px;
+  text-align: left;
+  background-color: #32323200;
+  padding: 2px 16px;
+  position: relative;
+  height: 120px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+
+.slide .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slide .column {
+  float: left;
+  width: 16.66%;
+  margin: 0;
+  padding: 0%;
+}
+
+.slide .demo {
+  opacity: 0.6;
+}
+
+.slide .active,
+.slide .demo:hover {
+  opacity: 1;
+}
+
+.gehl .vehicles{
+  padding: 10px 70px;
+}
+
+ @media (min-width:360px) and (max-width:991px){
+  .slide .container-fluid {
+    width: 100%;
+    padding: 0%;
+    height: fit-content;
+    margin-top: 35%;
+    margin-bottom: 0%;
+  }
+  
+  .slide .prev,
+  .slide .next {
+    cursor: pointer;
+    position: absolute;
+    top: 23%;
+    width: auto;
+    padding: 6px;
+    color: rgb(198, 198, 198);
+    font-weight:  lighter;
+    font-size: 50px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+  }
+  
+  .slide .next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+    margin-left: 100px;
+    margin-top: 00px;
+    position: absolute;
+  }
+  
+  .slide .prev:hover,
+  .slide .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .slide .caption-container {
+    margin-top: -40px;
+    text-align: left;
+    background-color: #32323200;
+    padding: 2px 16px;
+    position: relative;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+
+  .gehl .vehicles{
+    padding: 0px 5px;
+  }
+
+  .gehl .vehicles .info p{
+    padding: 0px 20px;
+  }
+
+  .gehl .info .list ul{
+    margin-left: 2%;
+  }
+ }
+
